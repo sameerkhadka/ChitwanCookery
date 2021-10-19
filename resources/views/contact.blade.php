@@ -1,4 +1,15 @@
 @extends('layouts.app')
+
+@section('toastr')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>  
+    @if(Session::has('success'))  
+            toastr.success("{{ Session('success') }}");  
+    @endif  
+    </script>  
+@endsection
+
 @section('content')
         <div class="contact">
             <div class="contact-head">
@@ -32,16 +43,19 @@
 
                         <div class="contact-form">
                             <h5>Write to us</h5>
-                            
-                            <input type="text" placeholder="Full Name *">
+                        <form action="{{ route('submit-form') }}" method="POST">
+                        @csrf
+                            <input type="text" placeholder="Full Name *" name="name" >
 
-                            <input type="email" placeholder="Email *">
+                            <input type="email" placeholder="Email *" name="email">
 
-                            <input type="number" placeholder="Contact Number *">
+                            <input type="number" placeholder="Contact Number *" name="phone">
 
-                            <textarea name="" placeholder="Comment *"></textarea>
+                            <textarea name="" placeholder="Comment *" name="message"></textarea>
 
                             <button>Send</button>
+
+                        </form>
 
                         </div>
                     </div>

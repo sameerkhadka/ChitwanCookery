@@ -6,6 +6,8 @@ use App\Http\Controllers\SiteController;
 
 use App\Http\Controllers\PageController;
 
+use App\Http\Controllers\EmailController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,6 +38,8 @@ Route::GET('/courses/{slug}', [SiteController::class,'course_detail'])->name('co
 Route::GET('/courses', [SiteController::class,'course'])->name('course');
 
 Route::post('/update-data', [PageController::class,'updateStatus'])->name('update-data');
+
+Route::post('/submit-form',[EmailController::class,'send'])->name('submit-form');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
