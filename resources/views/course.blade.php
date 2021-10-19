@@ -11,7 +11,7 @@
                 @if($data->status == 1)
                     <div class="text if-active">
                         <p>{{$data->date}}</p>
-                        <a href="">Apply Now</a>
+                        <a href="{{$data->Link ? $data->Link : "#" }}" @if($data->Link) target="blank" @endif>Apply Now</a>
                     </div>
                 @endif
             </div>
