@@ -4,6 +4,8 @@
         <div class="banner" style="background: url({{asset('storage/pages/October2021/' . $item->image)}});">
             <div class="overlay banner-overlay"></div>
 
+            
+
             <div class="banner-text">
                 <p class="small-heading">{{$item->title}}</p>
                 <h2>{{$item->description}}</h2>

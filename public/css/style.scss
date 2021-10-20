@@ -1,6 +1,37 @@
 $main-color : #00a551;
 
 
+video.banner-video {
+    
+    width: 100%;
+}
+
+.call-btn {
+    a {
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.18;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-family: 'Stilu';
+        display: block;
+        margin-top: 12px;
+
+        i {
+            transform: rotate(97deg);
+            font-size: 12px;
+        }
+    }
+}
+
+.text.dwnld  {
+    a {
+        width: auto;
+        padding: 0 10px;
+    }
+}
+
 .site-menu{
     position: fixed;
     top: 0;
@@ -265,6 +296,8 @@ header {
     padding: 1.9rem 1.7% 1.9rem 2.2%;
     transition: all .5s;
     z-index: 2;
+    display: flex;
+    justify-content: space-between;
 
     .logo {
         img {
@@ -279,6 +312,7 @@ header {
     background-position: center !important;
     background-size: cover !important;
     position: relative;
+    overflow: hidden;
 
     .banner-overlay {
         background: rgba(0,0,0,0.42)
@@ -1050,4 +1084,68 @@ footer {
     p {
         margin-bottom: 0;
     }
+}
+
+.testimonial {
+    position: relative;
+
+    .test-bg {
+        background-position: center !important;
+        background-size: cover !important;
+        background-attachment:  fixed !important;
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background:rgba(16, 58, 37, 0.8)
+        }
+    }
+}
+
+.message-box {
+    .item {
+        position: relative;
+        height: 675px;
+    }
+
+    .msg-content {
+   
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        .text {
+            color: #fff;
+            p {
+                margin: 50px;
+                font-size: 19px;
+            }
+
+            h4 {
+                font-size: 32px;
+                margin-bottom: 0;
+            }
+
+            h6 {
+                font-size: 20px;
+                font-weight: 100;
+                letter-spacing: 1.2px;
+            }
+        }
+
+        img {
+            width: 200px !important;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 10px auto;
+        }
+    }
+
+    
 }

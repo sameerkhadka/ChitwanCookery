@@ -15,6 +15,9 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     
+    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}">
+
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/reset.css')}}">
     <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
@@ -117,6 +120,10 @@
                 <a href="{{route('index')}}">
                     <img src="{{Voyager::image(setting('site.logo'))}}" alt="">
                 </a>
+            </div>
+
+            <div class="call-btn">
+                <a href="tel:+977-9813361904"><i class="fas fa-phone"></i> +977-9813361904  </a>
             </div>
         </header>
 

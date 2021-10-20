@@ -1,7 +1,10 @@
 @extends('layouts.app')
 @section('content')
-        <div class="banner" style="background: url({{Voyager::image($data->image)}});">
+        <div class="banner" >
             <div class="overlay banner-overlay"></div>
+            <video autoplay muted loop  class="banner-video">
+                <source src="{{asset('images/banner.mp4')}}" type="video/mp4">
+            </video>
 
             <div class="banner-text">
                 <p class="small-heading">{{$data->title}}</p>
@@ -90,15 +93,40 @@
             </div>
         </div>
 
-        <div class="join" style='background:url({{asset('images/bg.jpg')}}) ;'>
-            <div class="overlay join-overlay"></div>
-            <div class="text">
-                <p class='small-heading'>{{$data->enrollment_title}}</p>
-                <h4>{{$data->enrollment_subtitle}}</h4>
-                <p>{{$data->enrollment_description}}</p>
+        <div class="testimonial">
+            <div class="overlay test-bg" style='background:url({{asset('images/cookery-detail.jpg')}}) ;'></div>
+            <div class="message-box owl-carousel">
+                    <div class="item">
+                        <div class="msg-content">
+                            <img src="{{asset('images/Message-Sachin P. KC.jpg')}}" alt="">
+                            <div class="text">
+                                <p>“Hospitality Industry has provided me all that I am now. And though I might not be able to
+                                    contribute all that I have received, but that does not stop me from being innovative and be a door
+                                    opener for the future generation. With CCC I would like to try to give back to the hospitality
+                                    industry of Nepal”
+                                </p>
+                                <h4>Mr. Sachin Pratap KC</h4>
+                                <h6>Managing Director</h6>
+                            </div>
+                        </div>
+                    </div>
 
-                <a href="{{url('/how-to-apply/#section-intake')}}">Upcoming Intakes</a>
+                    <div class="item">
+                  
 
+                        <div class="msg-content">
+                            <img src="./images/Message-Chef Kumar Chalise.jpg" alt="">
+                            <div class="text">
+                                <p>“It gives me immense pleasure in inviting you to begin a career in culinary and
+                                    hospitality industry with endless job opportunities through the CCC.  Here, we focus on overall
+                                    life skill development of the individual, which is attained through perfect teaching
+                                    methodologies adopted by the culinary trainer and soft skills faculties.”
+                                </p>
+                                <h4>Chef. Kumar Chalise</h4>
+                                <h6>Culinary Head</h6>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
 
@@ -121,6 +149,18 @@
 
                     <a href="{{route('contact')}}">See Location</a>
                 </div>
+            </div>
+        </div>
+
+        <div class="join" style='background:url({{asset('images/bg.jpg')}}) ;'>
+            <div class="overlay join-overlay"></div>
+            <div class="text">
+                <p class='small-heading'>{{$data->enrollment_title}}</p>
+                <h4>{{$data->enrollment_subtitle}}</h4>
+                <p>{{$data->enrollment_description}}</p>
+
+                <a href="{{url('/how-to-apply/#section-intake')}}">Upcoming Intakes</a>
+
             </div>
         </div>
 

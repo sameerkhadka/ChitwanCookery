@@ -1,3 +1,30 @@
+video.banner-video {
+  width: 100%;
+}
+
+.call-btn a {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.18;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-family: 'Stilu';
+  display: block;
+  margin-top: 12px;
+}
+
+.call-btn a i {
+  -webkit-transform: rotate(97deg);
+          transform: rotate(97deg);
+  font-size: 12px;
+}
+
+.text.dwnld a {
+  width: auto;
+  padding: 0 10px;
+}
+
 .site-menu {
   position: fixed;
   top: 0;
@@ -261,6 +288,12 @@ header {
   -webkit-transition: all .5s;
   transition: all .5s;
   z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 header .logo img {
@@ -273,6 +306,7 @@ header .logo img {
   background-position: center !important;
   background-size: cover !important;
   position: relative;
+  overflow: hidden;
 }
 
 .banner .banner-overlay {
@@ -1013,5 +1047,67 @@ footer .footer-bottom p a {
 
 .if-active p {
   margin-bottom: 0;
+}
+
+.testimonial {
+  position: relative;
+}
+
+.testimonial .test-bg {
+  background-position: center !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+}
+
+.testimonial .test-bg::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(16, 58, 37, 0.8);
+}
+
+.message-box .item {
+  position: relative;
+  height: 675px;
+}
+
+.message-box .msg-content {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.message-box .msg-content .text {
+  color: #fff;
+}
+
+.message-box .msg-content .text p {
+  margin: 50px;
+  font-size: 19px;
+}
+
+.message-box .msg-content .text h4 {
+  font-size: 32px;
+  margin-bottom: 0;
+}
+
+.message-box .msg-content .text h6 {
+  font-size: 20px;
+  font-weight: 100;
+  letter-spacing: 1.2px;
+}
+
+.message-box .msg-content img {
+  width: 200px !important;
+  height: 200px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 10px auto;
 }
 /*# sourceMappingURL=style.css.map */
