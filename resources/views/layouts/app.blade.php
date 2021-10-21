@@ -123,7 +123,7 @@
             </div>
 
             <div class="call-btn">
-                <a href="tel:+977-9813361904"><i class="fas fa-phone"></i> +977-9813361904  </a>
+                <a href="tel:{{setting('contact-us.number')}}"><i class="fas fa-phone"></i> {{setting('contact-us.number')}} </a>
             </div>
         </header>
 

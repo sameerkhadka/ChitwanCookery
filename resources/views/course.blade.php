@@ -4,9 +4,12 @@
         <div class="banner" >
             <div class="overlay banner-overlay"></div>
 
-            <video autoplay muted loop  class="banner-video">
-                <source src="{{asset('images/banner.mp4')}}" type="video/mp4">
-            </video>
+            @foreach(json_decode($data->image) as $video)
+                <video autoplay muted loop  class="banner-video">
+                    <source src="{{asset('storage/' . $video->download_link)}}" type="video/mp4">
+                </video>
+                @break;
+            @endforeach
             <div class="banner-text">
                 <p class="small-heading">Courses</p>
                 <h2>{{$data->title}}</h2>
