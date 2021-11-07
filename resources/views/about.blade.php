@@ -1,10 +1,11 @@
 @extends('layouts.app')
 @section('content')
         @php $item = \App\Page::where('id','2')->first(); @endphp
-        <div class="banner" style="background: url({{asset('storage/pages/October2021/' . $item->image)}});">
+        <div class="banner">
             <div class="overlay banner-overlay"></div>
-
-            
+            <video autoplay muted loop  class="banner-video">
+                <source src="{{asset('storage/pages/october2021/' . $item->image )}}" type="video/mp4">
+            </video>          
 
             <div class="banner-text">
                 <p class="small-heading">{{$item->title}}</p>

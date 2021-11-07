@@ -37,7 +37,11 @@ Route::GET('/courses/{slug}', [SiteController::class,'course_detail'])->name('co
 
 Route::GET('/courses', [SiteController::class,'course'])->name('course');
 
+Route::GET('/gallery/{slug}', [SiteController::class,'gallery'])->name('gallery');
+
 Route::post('/update-data', [PageController::class,'updateStatus'])->name('update-data');
+
+Route::post('/update-gallery', [PageController::class,'updateGallery'])->name('update-gallery');
 
 Route::post('/submit-form',[EmailController::class,'send'])->name('submit-form');
 

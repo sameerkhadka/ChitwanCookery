@@ -47,11 +47,29 @@ $('.message-box').owlCarousel({
     loop: true,
     margin: 0,
     nav: false,
-    autoplay:false,
+    autoplay:true,
     dots: false,
-    animateOut: 'fadeOut',
-    animateIn: 'fadeIn',
-    autoplayTimeout: 6000,
+    autoplayTimeout: 3000,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 1
+        },
+        1000: {
+            items: 1
+        }
+    }
+})
+
+$('.banner-slider').owlCarousel({
+    loop: true,
+    margin: 0,
+    nav: false,
+    autoplay:true,
+    dots: false,
+    autoplayTimeout: 3000,
     responsive: {
         0: {
             items: 1

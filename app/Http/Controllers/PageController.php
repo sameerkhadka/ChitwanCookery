@@ -49,4 +49,15 @@ class PageController extends Controller
             "msg" => "{$msg}"
         ],200);
     }
+
+    public function updateGallery(Request $request){
+        $model = '\\App\\Gallery';
+        $course = $model::find($request->id);
+        $course->status = $request->val;
+        $course->update();
+        $msg = $request->val ? 'Gallery shown in frontend' : 'This gallery will not be shown';
+        return response([
+            "msg" => "{$msg}"
+        ],200);
+    }
 }
