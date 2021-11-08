@@ -287,7 +287,7 @@ header {
   padding: 1.9rem 1.7% 1.9rem 2.2%;
   -webkit-transition: all .5s;
   transition: all .5s;
-  z-index: 2;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1109,5 +1109,69 @@ footer .footer-bottom p a {
   -o-object-fit: cover;
      object-fit: cover;
   margin: 10px auto;
+}
+
+.gallery-banner {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-banner .banner-overlay {
+  background: rgba(0, 0, 0, 0.42);
+  z-index: 2;
+}
+
+.gallery-banner .banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  z-index: 3;
+}
+
+.gallery-banner .banner-text h2 {
+  font-size: 62px;
+  font-weight: 200;
+  line-height: 1.12;
+  word-spacing: 7px;
+}
+
+.gallery-banner .banner-text p {
+  text-transform: uppercase;
+}
+
+.gallery-banner .banner-slider img {
+  position: relative;
+  z-index: -1;
+}
+
+.gallery-img {
+  padding: 20px;
+  width: 100%;
+  -webkit-columns: 3;
+          columns: 3;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.gallery-img figure {
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery-img figure:hover img {
+  -webkit-transform: scale(1.14);
+          transform: scale(1.14);
+}
+
+.gallery-img figure img {
+  width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 /*# sourceMappingURL=style.css.map */

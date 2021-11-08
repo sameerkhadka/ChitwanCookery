@@ -10,6 +10,8 @@ use App\Partner;
 
 use App\Course;
 
+use App\Gallery;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -31,6 +33,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $nav_partner = Partner::orderBy('order','ASC')->get();
         $subjects = Course::orderBy('order','ASC')->get();
-        View::share(compact('nav_partner','subjects'));
+        $photos = Gallery::orderBy('order','ASC')->get();
+        View::share(compact('nav_partner','subjects','photos'));
     }
 }

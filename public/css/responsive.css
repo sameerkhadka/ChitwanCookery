@@ -18,6 +18,10 @@
     .menu .menu-head .menu-text h2 {
         font-size: 45px;
     }
+    
+    .courses .content .wrap {
+        height: 120vh;
+    }
 
 }
 
@@ -99,6 +103,10 @@
 
 
 @media screen and (max-width: 480px) { 
+    
+    .call-btn a {
+        display: none;
+    }
 
     .fl-equal {
         display: block;

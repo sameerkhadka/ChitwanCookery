@@ -14,6 +14,8 @@ use App\Course;
 
 use App\Instruction;
 
+use App\Gallery;
+
 class SiteController extends Controller
 {
     public function index()
@@ -57,5 +59,11 @@ class SiteController extends Controller
     public function course()
     {
         return view('course');
+    }
+
+    public function gallery($slug)
+    {
+        $data = Gallery::where('slug',$slug)->first();
+        return view('gallery', compact('data'));
     }
 }

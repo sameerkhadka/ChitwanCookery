@@ -102,6 +102,19 @@
                         </li>
 
                         <li>
+                            <a href="" class="has-sub">Gallery 
+                                <figure>
+                                    <i class="fas fa-angle-down"></i>
+                                </figure> 
+                            </a>   
+                            <ul class="sub-menu">
+                                @foreach($photos as $photo)
+                                    <li><a href="{{route('gallery', $photo->slug)}}">{{$photo->title}}</a></li>
+                                @endforeach
+                            </ul>
+                        </li>
+
+                        <li>
                             <a href="{{route('apply')}}">How to apply</a>
                         </li>
 
