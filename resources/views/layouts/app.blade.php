@@ -108,9 +108,11 @@
                                 </figure> 
                             </a>   
                             <ul class="sub-menu">
-                                @foreach($photos as $photo)
-                                    <li><a href="{{route('gallery', $photo->slug)}}">{{$photo->title}}</a></li>
-                                @endforeach
+                                @if($photos)
+                                    @foreach($photos as $photo)
+                                        <li><a href="{{route('gallery', $photo->slug)}}">{{$photo->title}}</a></li>
+                                    @endforeach
+                                @endif
                             </ul>
                         </li>
 
